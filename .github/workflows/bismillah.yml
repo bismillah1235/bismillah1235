@@ -11,12 +11,10 @@ jobs:
     steps:
     - name: Mendownload Ngrok.
       run: |
-        Invoke-WebRequest https://dl.dropbox.com/s/issfjyk6hncbyv2/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-        Invoke-WebRequest https://dl.dropbox.com/s/y1g79mn9m2y4lge/start.bat -OutFile start.bat
-        Invoke-WebRequest 
-https://dl.dropboxusercontent.com/s/q40vz0pjaxtm3p8/wallpaper.png
- -OutFile wallpaper.bmp
-        Invoke-WebRequest https://dl.dropbox.com/s/lff8h0knnon2ktq/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/Babilahyzx/kntla/main/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/Babilahyzx/kntla/main/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/Babilahyzx/kntla/main/wallpaper.png -OutFile wallpaper.bmp
+        Invoke-WebRequest https://raw.githubusercontent.com/Babilahyzx/kntla/main/wallpaper.bat -OutFile wallpaper.bat
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
     - name: Connect Ke Akun Ngrok.
@@ -36,5 +34,5 @@ https://dl.dropboxusercontent.com/s/q40vz0pjaxtm3p8/wallpaper.png
       run: cmd /c start.bat
     - name: Berhasil Dibuat! Anda Bisa Menutup Tab Sekarang.
       run: | 
-        Invoke-WebRequest https://dl.dropboxusercontent.com/s/upyhf7i4ecraj3j/loop.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://raw.githubusercontent.com/Babilahyzx/kntla/main/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
